@@ -5,7 +5,7 @@ class ArrayVisualisation extends Component {
     render(){
         return (
             <div>
-                <ArrayBlockList data={this.props.data} />
+                <ArrayBlockList data={this.props.data} colors={this.props.colors} />
             </div>
         )
     }

@@ -15,6 +15,8 @@ class Header extends Component {
                 selectedSort={this.props.selectedSort}
                 changeSelectedSort={this.props.changeSelectedSort}
                 sortList={this.props.sortList}
+                delay={this.props.delay}
+                changeDelay={this.props.changeDelay}
             />
         </header>
         );

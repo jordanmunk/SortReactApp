@@ -6,7 +6,7 @@ class ArrayBlock extends Component {
     render(){
         return (
         <div className={classes.ArrayBlock}>
-            {[...Array(this.props.value)].map(() => <Block /> )}
+            {[...Array(this.props.value)].map(() => <Block colors={this.props.colors} index={this.props.index} /> )}
         </div>
         )
     }

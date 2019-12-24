@@ -3,3 +3,19 @@
     height: 16px;
     background-color: cornflowerblue;
 }
+
+.Red {
+    background-color: red !important;
+}
+
+.Green {
+    background-color: green !important;
+}
+
+.Blue {
+    background-color: blue !important;
+}
+
+.Yellow {
+    background-color: yellow !important;
+}

@@ -6,77 +6,133 @@ class QuickSort extends Component {
     leftIndex = 0;
     rightIndex =0;
     pivotIndex = 0;
-    finishedSorting = false;
 
     changeLeftIndex(leftIndex){
         this.leftIndex = leftIndex;
-        console.log("New leftIndex: " + this.leftIndex);
+        this.props.changeColors(leftIndex, "green");
     }
     changeRightIndex(rightIndex){
         this.rightIndex = rightIndex;
-        console.log("New rightIndex: " + this.rightIndex);
+        this.props.changeColors(rightIndex, "red");
     }
     changePivotIndex(pivotIndex){
         this.pivotIndex = pivotIndex;
-        console.log("New pivotIndex: " + this.pivotIndex);
+        this.props.changeColors(pivotIndex, "yellow");
     }
     changeCurrentArray(array){
         this.currentArray = [...array];
-        console.log("New array");
-        console.log(this.currentArray);
-        this.props.changeArray(this.currentArray, false);
+        this.props.changeArray(this.currentArray);
     }
 
     swap(items, leftIndex, rightIndex){
         const temp = items[leftIndex];
         items[leftIndex] = items[rightIndex];
-        this.changeLeftIndex(leftIndex);
         items[rightIndex] = temp;
-        this.changeRightIndex(rightIndex);
         this.changeCurrentArray(items);
     }
 
-    partition(items, left, right) {
+    async partition(items, left, right) {
         let pivot   = items[Math.floor((right + left) / 2)], //middle element
             i       = left, //left pointer
-            j       = right; //right pointer
-        this.changePivotIndex(Math.floor((right + left) / 2));
+            j       = right, //right pointer
+            self    = this;
+
+        await new Promise(resolve =>
+            setTimeout(() => {
+                resolve();
+            }, this.props.delay)
+        );
+
+        await self.changePivotIndex(Math.floor((right + left) / 2));
+
+        await new Promise(resolve =>
+            setTimeout(() => {
+                resolve();
+            }, this.props.delay)
+        );
+
+        await self.changeLeftIndex(i);
+
+        await new Promise(resolve =>
+            setTimeout(() => {
+                resolve();
+            }, this.props.delay)
+        );
+
+        await self.changeRightIndex(j);
+
+        await new Promise(resolve =>
+            setTimeout(() => {
+                resolve();
+            }, this.props.delay)
+        );
 
         while (i <= j) {
             while (items[i] < pivot) {
                 i++;
+
+                await new Promise(resolve =>
+                    setTimeout(() => {
+                        resolve();
+                    }, this.props.delay)
+                );
+
+                await self.changeLeftIndex(i);
             }
             while (items[j] > pivot) {
                 j--;
+
+                await new Promise(resolve =>
+                    setTimeout(() => {
+                        resolve();
+                    }, this.props.delay)
+                );
+
+                await self.changeRightIndex(j);
             }
             if (i <= j) {
-                this.swap(items, i, j); //swap two elements
+                self.swap(items, i, j); //swap two elements
                 i++;
                 j--;
+
+                await new Promise(resolve =>
+                    setTimeout(() => {
+                        resolve();
+                    }, this.props.delay)
+                );
+
+                await self.changeLeftIndex(i);
+
+                await new Promise(resolve =>
+                    setTimeout(() => {
+                        resolve();
+                    }, this.props.delay)
+                );
+
+                await self.changeRightIndex(j);
             }
         }
+
         return i;
     }
 
-    quickSort(items, left, right){
+    async quickSort(items, left, right){
         let index;
 
         const self = this;
-        setTimeout(function() {
         if(items.length > 1) {
-            index = self.partition(items, left, right);
+            index = await self.partition(items, left, right);
 
             if (left < index - 1) {
-                self.quickSort(items, left, index - 1);
+                await self.quickSort(items, left, index - 1);
             }
 
             if (index < right) {
-                self.quickSort(items, index, right);
+                await self.quickSort(items, index, right);
             }
         }
 
         return items;
-        }, 250);
     }
 
     sort(){

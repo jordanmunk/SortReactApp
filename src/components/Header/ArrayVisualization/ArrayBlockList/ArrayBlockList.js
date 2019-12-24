@@ -5,8 +5,8 @@ import classes from "./ArrayBlockList.module.css";
 const arrayBlockList = (props) => {
     return (
         <div className={classes.Content}>
-            {props.data.map(item => {
-                return <ArrayBlock value={item} />
+            {props.data.map((item, index) => {
+                return <ArrayBlock value={item} colors={props.colors} index={index} />
             })}
         </div>
     );
