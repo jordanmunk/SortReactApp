@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="222b873c-8f0a-4a04-b1a5-5e5d9ce175f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/ArrayVisualization/ArrayBlockList/ArrayBlock/ArrayBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/ArrayVisualization/ArrayBlockList/ArrayBlock/ArrayBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/ArrayVisualization/ArrayBlockList/ArrayBlock/Block/Block.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/ArrayVisualization/ArrayBlockList/ArrayBlock/Block/Block.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/ArrayVisualization/ArrayBlockList/ArrayBlock/Block/Block.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/ArrayVisualization/ArrayBlockList/ArrayBlock/Block/Block.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/ArrayVisualization/ArrayBlockList/ArrayBlockList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/ArrayVisualization/ArrayBlockList/ArrayBlockList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/ArrayVisualization/ArrayVisualisation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/ArrayVisualization/ArrayVisualisation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Sorting/Sorting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Sorting/Sorting.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sort/QuickSort/QuickSort.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort/QuickSort/QuickSort.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/ArrayArea/ArrayArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ArrayArea/ArrayArea.js" afterDir="false" />
     </list>
@@ -33,7 +26,7 @@
   <component name="ProjectId" id="1V9pIqbuSwFVWn5oSZtQjW9I1hc" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/React/burger-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Sort/MergeSort" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -41,6 +34,11 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Persoonlijk\SortReactApp\src\components\Sort\MergeSort" />
+      <recent name="D:\Persoonlijk\SortReactApp\src\components\Sort\SelectionSort" />
+      <recent name="D:\Persoonlijk\SortReactApp\src\components\Sort\BubbleSort" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\JordanMunk\Desktop\React\sorting-react-app\src\components\Header\ArrayVisualization\ArrayBlockList" />
     </key>
@@ -70,7 +68,7 @@
       <workItem from="1576675091870" duration="1486000" />
       <workItem from="1576677375525" duration="4448000" />
       <workItem from="1577089181508" duration="20462000" />
-      <workItem from="1577174725477" duration="7692000" />
+      <workItem from="1577174725477" duration="14243000" />
     </task>
     <servers />
   </component>
@@ -89,5 +87,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Sort/BubbleSort/BubbleSort.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

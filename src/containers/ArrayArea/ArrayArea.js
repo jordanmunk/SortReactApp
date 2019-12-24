@@ -3,12 +3,15 @@ import Auxiliary from "../../hoc/Auxiliary/Auxiliary";
 import Header from "../../components/Header/Header";
 import ArrayVisualisation from "../../components/Header/ArrayVisualization/ArrayVisualisation";
 import QuickSort from "../../components/Sort/QuickSort/QuickSort";
+import BubbleSort from "../../components/Sort/BubbleSort/BubbleSort";
+import SelectionSort from "../../components/Sort/SelectionSort/SelectionSort";
+import MergeSort from "../../components/Sort/MergeSort/MergeSort";
 
 class ArrayArea extends Component {
     state = {
         currentArrayLength: 0,
         randomizedArray: [3, 5, 2, 4, 1],
-        sortListOptions: ["QuickSort", "BubbleSort"],
+        sortListOptions: ["QuickSort", "BubbleSort", "SelectionSort", "MergeSort"],
         selectedSort: "QuickSort",
         sortingMethod: null,
         sorting: false,
@@ -61,6 +64,28 @@ class ArrayArea extends Component {
                 this.setState({sorting: true});
                 break;
             case "BubbleSort":
+                this.setState({sortingMethod: <BubbleSort items={this.state.randomizedArray}
+                                                         changeArray={this.changeArrayHandler}
+                                                         changeColors={this.addOrReplaceColorHandler}
+                                                         delay={this.state.delay}
+                    />});
+                this.setState({sorting: true});
+                break;
+            case "SelectionSort":
+                this.setState({sortingMethod: <SelectionSort items={this.state.randomizedArray}
+                                                          changeArray={this.changeArrayHandler}
+                                                          changeColors={this.addOrReplaceColorHandler}
+                                                          delay={this.state.delay}
+                    />});
+                this.setState({sorting: true});
+                break;
+            case "MergeSort":
+                this.setState({sortingMethod: <MergeSort items={this.state.randomizedArray}
+                                                             changeArray={this.changeArrayHandler}
+                                                             changeColors={this.addOrReplaceColorHandler}
+                                                             delay={this.state.delay}
+                    />});
+                this.setState({sorting: true});
                 break;
         }
     };

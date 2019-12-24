@@ -3,21 +3,33 @@ import Auxiliary from "../../../hoc/Auxiliary/Auxiliary";
 
 class QuickSort extends Component {
     currentArray = [...this.props.items];
-    leftIndex = 0;
-    rightIndex =0;
-    pivotIndex = 0;
 
-    changeLeftIndex(leftIndex){
-        this.leftIndex = leftIndex;
-        this.props.changeColors(leftIndex, "green");
+    async changeLeftIndex(leftIndex){
+        await new Promise(resolve =>
+            setTimeout(() => {
+                resolve();
+            }, this.props.delay)
+        );
+
+        await this.props.changeColors(leftIndex, "green");
     }
-    changeRightIndex(rightIndex){
-        this.rightIndex = rightIndex;
-        this.props.changeColors(rightIndex, "red");
+    async changeRightIndex(rightIndex){
+        await new Promise(resolve =>
+            setTimeout(() => {
+                resolve();
+            }, this.props.delay)
+        );
+
+        await this.props.changeColors(rightIndex, "red");
     }
-    changePivotIndex(pivotIndex){
-        this.pivotIndex = pivotIndex;
-        this.props.changeColors(pivotIndex, "yellow");
+    async changePivotIndex(pivotIndex){
+        await new Promise(resolve =>
+            setTimeout(() => {
+                resolve();
+            }, this.props.delay)
+        );
+
+        await this.props.changeColors(pivotIndex, "yellow");
     }
     changeCurrentArray(array){
         this.currentArray = [...array];
@@ -37,28 +49,8 @@ class QuickSort extends Component {
             j       = right, //right pointer
             self    = this;
 
-        await new Promise(resolve =>
-            setTimeout(() => {
-                resolve();
-            }, this.props.delay)
-        );
-
         await self.changePivotIndex(Math.floor((right + left) / 2));
-
-        await new Promise(resolve =>
-            setTimeout(() => {
-                resolve();
-            }, this.props.delay)
-        );
-
         await self.changeLeftIndex(i);
-
-        await new Promise(resolve =>
-            setTimeout(() => {
-                resolve();
-            }, this.props.delay)
-        );
-
         await self.changeRightIndex(j);
 
         await new Promise(resolve =>
@@ -70,45 +62,17 @@ class QuickSort extends Component {
         while (i <= j) {
             while (items[i] < pivot) {
                 i++;
-
-                await new Promise(resolve =>
-                    setTimeout(() => {
-                        resolve();
-                    }, this.props.delay)
-                );
-
                 await self.changeLeftIndex(i);
             }
             while (items[j] > pivot) {
                 j--;
-
-                await new Promise(resolve =>
-                    setTimeout(() => {
-                        resolve();
-                    }, this.props.delay)
-                );
-
                 await self.changeRightIndex(j);
             }
             if (i <= j) {
                 self.swap(items, i, j); //swap two elements
                 i++;
                 j--;
-
-                await new Promise(resolve =>
-                    setTimeout(() => {
-                        resolve();
-                    }, this.props.delay)
-                );
-
                 await self.changeLeftIndex(i);
-
-                await new Promise(resolve =>
-                    setTimeout(() => {
-                        resolve();
-                    }, this.props.delay)
-                );
-
                 await self.changeRightIndex(j);
             }
         }
